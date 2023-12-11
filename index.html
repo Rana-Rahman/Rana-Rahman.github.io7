@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border: 2px solid black;
+        }
+        .calculation {
+            height: 202.500px;
+            width: 770.156px;
+            padding: 8px 16px;
+            border: 6px solid #40AA6D;
+        }
+        table, td, th {
+            border: 1px solid;
+        }
+        .inherit-list {
+            width: 100%;
+            height: 100px;
+            border-collapse:collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-model-area">
+        <div class="box-area">
+            <div class="box-text">
+                <h1 class="box-title">
+                    The CSS Box Model
+                </h1>
+                <p class="box-p">
+                    In CSS, the term "box model" is used when talking about design and layout 
+                </p>
+                <p class="box-p">
+                    The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins. The image below illustrates the box model:
+                </p>
+            </div>
+            <div class="box-image">
+                <img src="box-img.png" alt="">
+            </div>
+            <div class="box-text">
+                <p class="box-p">
+                    Explanation of the different parts:
+                </p>
+                <ul class="box-list">
+                    <li><b>Content</b> - The content of the box, where text and images appear</li>
+                    <li><b>Padding</b> - Clears an area around the content. The padding is transparent</li>
+                    <li><b>Border</b> - A border that goes around the padding and content</li>
+                    <li><b>Margin</b> - Cleats an area outside the border. The margin is transparent</li>
+                </ul>
+                <p class="box-p">
+                    THe box model allows us to add a border around elements, and to define space between elements.
+                </p>
+                <h1 class="box title">
+                    Width and Height of an Elemnet
+                </h1>
+                <p class="box-p">
+                    In order to set the width and height of ana element correctly in all browsers, you need to know the box model works.
+                </p>
+                <p class="box-p important-p"><b>Important:</b> When you the width and height properties of an element with CSS, you just set the width and height of the <b>content area</b>. To calculate the total width and height of an element, you must also include the padding and borders</p>
+                <p class="box-p">Here is the calculation</p>
+                <div class="calculation">
+                        &nbsp;&nbsp;320px (width of content area) <br>
+                        + 20px (left padding = right padding) <br>
+                        + 10px (left border + right border) <br>
+                        = <b>350px (total width)</b> <br>
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;50px (height of content area) <br>
+                        + 20px (top padding + bottom padding) <br>
+                        + 10px (top border + bottom border) <br>
+                        = <b>80 px (total height)</b> <br>
+                </div>
+                <p class="box-p">
+                    The total width of an element should be calculated like this:
+                </p>
+                <p class="box-p">
+                    Total element width = width + left padding + right padding + left border + right border
+                </p>
+                <p class="box-p">
+                    THe total height of an element should be calculated like this:
+                </p>
+                <p class="box-p">
+                    Total element height = height + top padding + bottom padding + top border + bottom border
+                </p>
+                <div class="box-note">
+                    <p class="box-p">
+                        <b>Note:</b> The margin property also affects the total space that the box will take up on the page, but the margin is not included in the actual size of the box. The box's total width and height stops at the border.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inherit-area">
+        <div class="inherit">
+            <div class="inherit-text">
+                <h1 class="inherit-title">
+                    CSS inherit Keyword
+                </h1>
+                <h3 class="inherit-example-title">
+                    Example
+                </h3>
+                <p class="inherit-p">
+                    Set the text-color for &lt;span&gt; elements to blue, except those inside elements with class="extra":
+                </p>
+                <h2 class="inherit-definition">
+                    Definition and Usage
+                </h2>
+                <p class="inherit-p">
+                    The <span style="color: rgb(194, 13, 13);">inherit</span> keyword specifies that a property should inherit its value from its parent element.
+                </p>
+                <p class="inherit-p">
+                    The <span style="color: rgb(194, 13, 13);">inherit</span> keyword can be used for any CSS property, and on any HTML element.
+                </p>
+                <h2 class="inherit-title">
+                    Browser Support
+                </h2>
+                <p class="inherit-p">
+                    The numbers in the table specifies the first browser version that fully supports the inherit keyword.
+                </p>
+                <table class="inherit-list">
+                    <tr>
+                        <td>Keyword</td>
+                        <td><i class="fa-brands fa-chrome"></i></td>
+                        <td><i class="fa-brands fa-internet-explorer"></i></td>
+                        <td><i class="fa-brands fa-firefox-browser"></i></td>
+                        <td><i class="fa-brands fa-safari"></i></td>
+                        <td><i class="fa-brands fa-opera"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Inherit</td>
+                        <td>1.0</td>
+                        <td>8.0</td>
+                        <td>1.0</td>
+                        <td>1.0</td>
+                        <td>4.0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
